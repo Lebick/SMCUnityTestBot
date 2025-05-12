@@ -8,6 +8,7 @@ import re
 import datetime
 import json
 import os
+from keep_alive import keep_alive
 
 TOKEN = os.environ.get("TOKEN")
 CONFIG_FILE = 'config.json'
@@ -163,4 +164,5 @@ async def manual_send(interaction: discord.Interaction, guild_id: str = None):
   await interaction.followup.send("✅ 완료! 채널에 전송했습니다.")
 
 
+keep_alive()
 client.run(TOKEN)
