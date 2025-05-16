@@ -115,8 +115,8 @@ class MyClient(discord.Client):
     now = datetime.datetime.now(datetime.timezone.utc)
     now_kst = now.astimezone(datetime.timezone(datetime.timedelta(hours=9)))
     print(f"현재 시간: {now_kst}")
-    # 토요일 12:00(KST)
-    if now_kst.weekday() == 5 and now_kst.hour == 12 and now_kst.minute == 0:
+    # 금요일 12:00(KST)
+    if now_kst.weekday() == 4 and now_kst.hour == 12 and now_kst.minute == 0:
       # 테스트 길드 지정 시 해당 길드만
       target_guilds = self.guilds
       if TEST_GUILD_ID:
