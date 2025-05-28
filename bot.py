@@ -133,7 +133,6 @@ client = MyClient()
 
 @client.tree.command(name="채널여기",
                      description="이 명령어를 실행한 채널을 쿠폰 알림 채널로 설정합니다.")
-@app_commands.checks.has_permissions(administrator=True)
 async def set_channel(interaction: discord.Interaction):
   guild_id = str(interaction.guild_id)
   channel_id = interaction.channel_id
